@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.neuroverseos/bevia",
+  "title": "Bevia",
+  "description": "Query your Bevia map over MCP — territories, moments, and briefings from your human+AI work.",
+  "repository": {
+    "url": "https://github.com/NeuroverseOS/bevia-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://bevia.co",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://bevia.co/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <token> — generate a token at https://bevia.co/connect/ai. OAuth-capable clients (e.g. browser-based ones) can leave this unset; the endpoint advertises OAuth via standard discovery.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@neuroverse/bevia-mcp-server",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "BEVIA_TOKEN",
+          "description": "Bevia API token — generate at https://bevia.co/connect/ai. Shown once at creation; treat it like an API key.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
