@@ -16,7 +16,7 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer <token> — generate a token at https://bevia.co/connect/ai. OAuth-capable clients (e.g. browser-based ones) can leave this unset; the endpoint advertises OAuth via standard discovery.",
+          "description": "Bearer <token> — generate a token at https://bevia.co/access-keys. OAuth-capable clients (e.g. browser-based ones) can leave this unset; the endpoint advertises OAuth via standard discovery.",
           "isRequired": false,
           "isSecret": true
         }
@@ -36,7 +36,7 @@
       "environmentVariables": [
         {
           "name": "BEVIA_TOKEN",
-          "description": "Bevia API token — generate at https://bevia.co/connect/ai. Shown once at creation; treat it like an API key.",
+          "description": "Bevia API token — generate at https://bevia.co/access-keys. Shown once at creation; treat it like an API key.",
           "isRequired": true,
           "isSecret": true
         }

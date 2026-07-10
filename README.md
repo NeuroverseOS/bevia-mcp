@@ -39,7 +39,7 @@ Two facts, any client:
 
 - **MCP URL:** `https://bevia.co/api/mcp` (Streamable HTTP)
 - **Auth:** a Bevia token — generate one at
-  [bevia.co/connect/ai](https://bevia.co/connect/ai). The token is
+  [bevia.co/access-keys](https://bevia.co/access-keys). The token is
   shown once at creation; the database stores only its hash.
 
 ### Remote (recommended)
